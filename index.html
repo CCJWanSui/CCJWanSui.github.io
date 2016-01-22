@@ -1,9 +1,89 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<title>CCJ 個屁-POST GENERATOR</title>
+		
+		<style>
+			body{
+				font-family: sans-serif;
+				color: #555;
+			}
+			.message{
+				background-color: #efefef;
+				padding: 50px;
+				max-width: 800px;
+				margin: 50px auto;
+			}
+			.message span{
+				color: black;
+				font-weight: bold;
+			}
+			.button{
+				font-size: 16px;
+				width: 100px;
+				text-align: center;
+				background-color: orange;
+				padding: 10px;
+				display: block;
+				border-radius: 8px;
+				cursor: pointer;
+				margin-top: 50px;
+				font-weight: bold;
+				color: black;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				border-bottom: 2px solid grey;
+			}
+			.button:active{
+				border-bottom: none;
+				border-top: 2px solid #999;
+			}
+		</style>
+		
 	</head>
+	
 	<body>
+	
 		<h1>TESTING THE SHITPOST HEADER</h1>
+		
+		<section class="message">
+			The <span class="noun"></span> likes to <span class="verb"></span> except when it's already <span class="verbing"></span>.
+	
+			<div class="button">RUN</div>
+		</section>
+		
+		
+		
+		<!--Start Coding-->
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" defer></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" async="async"></script>
+		
+		<script type="text/javascript">
+			window.noun = ['dog', 'cat','turtle','potato','chair'];
+			window.verb = ['run','eat','sleep','dream'];
+			window.verbing = ['running','eating','sleeping','crying','laughing','milking'];
+
+			$(document).ready(function() {
+				generate();
+				$('.button').click(function(){
+					generate();
+				});
+			});
+			function generate(){
+				$('.message span').each(function(){
+					var item = $(this).attr('class');
+					var n = Math.floor(Math.random() * window[item].length);
+					$(this).html(window[item][n]);
+				});
+			}
+		</script>
+		
 	</body>
 
 </html>
