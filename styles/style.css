@@ -1,0 +1,126 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+body{
+  font-family: sans-serif;
+  color: #555;
+  line-height: 1.5;
+  background-image: url('/img/11.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: bottom;
+}
+.message{
+  background-color: rgba(200,200,200,.7);
+  padding: 50px;
+  text-shadow: 0px 2px 3px white;
+  margin-bottom: 100px;
+}
+/*.message span{
+  color: black;
+  font-weight: bold;
+}*/
+.message p{
+  margin-bottom: 20px;
+}
+.button{
+  font-size: 20px;
+  width: 100px;
+  text-align: center;
+  background-color: orange;
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 50px;
+  font-weight: bold;
+  color: black;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-bottom: 2px solid grey;
+}
+.button:active{
+  border-bottom: none;
+  border-top: 2px solid #999;
+}
+
+main{
+  min-height: 100vh;
+  min-height: calc(100vh - 30px);
+  max-width: 1800px;
+  margin: 0 auto;
+  overflow: auto;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+footer{
+  width: 100%;
+  background-color: rgba(0,0,0,.6);
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+footer a{
+  color: white;
+  font-size: 16px;
+}
+h1{
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0px 3px 0px #ccc;
+}
+.faded{
+  color: #aaa;
+}
+.red{
+  color: red;
+}
+.brown{
+  color: brown;
+}
+
+.message, .notification{
+  width: 50%;
+  float: right;
+  font-size: 25px;
+}
+.notification{
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 25px;
+  opacity: .7;
+  background-color: rgba(255,255,255,.5);
+}
+
+@media screen and (max-width: 1200px) {
+  .message{width: 70%}
+  .notification{width: 30%;}
+  h1{font-size: 40px;}
+}
+@media screen and (max-width: 850px) {
+  .message, .notification{
+    float: left;
+    width: 100%;
+    font-size: 20px;
+  }
+  .notification{
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  .message{
+    margin-bottom: 250px;
+  }
+  h1{font-size: 30px;}
+}
+@media screen and (max-width: 600px) {
+  h1{font-size: 20px;}
+  .message{
+    padding: 10px;
+    font-size: 18px;
+  }
+}
